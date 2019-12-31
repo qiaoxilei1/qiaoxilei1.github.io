@@ -15,18 +15,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Archives: 2019/12 - 乔希磊の博客</title>
+<title>c++文件读写操作 - 乔希磊の博客</title>
 
 
-    <meta name="description" content="乔希磊の博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="乔希磊の博客">
-<meta property="og:url" content="http://qiaoxilei1.github.io/archives/2019/12/index.html">
+    <meta name="description" content="ofstream头文件： 1234567ofstream out(&quot;out.txt&quot;);if(out.is_open())&amp;#123;	out &lt;&lt; &quot;This is a line\n&quot; ;	out &lt;&lt; &quot;This is another line\n&quot;;	out.close();&amp;#125;  文件不存在时会自动创建文件当文件读写操作完成之后，我们必须将文件关闭以使文件重">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++文件读写操作">
+<meta property="og:url" content="http://qiaoxilei1.github.io/2019/12/31/c-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="乔希磊の博客">
-<meta property="og:description" content="乔希磊の博客">
+<meta property="og:description" content="ofstream头文件： 1234567ofstream out(&quot;out.txt&quot;);if(out.is_open())&amp;#123;	out &lt;&lt; &quot;This is a line\n&quot; ;	out &lt;&lt; &quot;This is another line\n&quot;;	out.close();&amp;#125;  文件不存在时会自动创建文件当文件读写操作完成之后，我们必须将文件关闭以使文件重">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://qiaoxilei1.github.io/images/og_image.png">
+<meta property="article:published_time" content="2019-12-31T01:59:43.000Z">
+<meta property="article:modified_time" content="2019-12-31T02:16:51.449Z">
 <meta property="article:author" content="乔希磊">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://qiaoxilei1.github.io/images/og_image.png">
 
@@ -86,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/yuandan.jpg" alt="乔希磊の博客" height="28">
+                <img src="/images/yuandan.jpg" alt="c++文件读写操作" height="28">
             
             </a>
         </div>
@@ -136,72 +139,115 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="tag is-link">
-        十二月 2019
-        </h3>
-        <div class="timeline">
+<div class="card">
+    
+    <div class="card-content article ">
         
-            <article class="media">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-31T01:59:43.000Z">2019-12-31</time>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-12-31T01:59:43.000Z">2019-12-31</time>
-                        <a href="/2019/12/31/c-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/" class="title has-link-black-ter is-size-6 has-text-weight-normal">c++文件读写操作</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
                 </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-12-30T09:42:48.000Z">2019-12-30</time>
-                        <a href="/2019/12/30/%E7%94%A8%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%8E%AF%E5%BD%A2%E6%97%A0%E9%94%81%E9%98%9F%E5%88%97/" class="title has-link-black-ter is-size-6 has-text-weight-normal">用数组实现的环形无锁队列</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-12-30T09:01:54.000Z">2019-12-30</time>
-                        <a href="/2019/12/30/base64%E7%BC%96%E8%A7%A3%E7%A0%81c-%E5%AE%9E%E7%8E%B0/" class="title has-link-black-ter is-size-6 has-text-weight-normal">base64编解码c++实现</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 read (About 293 words)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> visits
+                </span>
+                
+            </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                c++文件读写操作
+            
+        </h1>
+        <div class="content">
+            <h1 id="ofstream"><a href="#ofstream" class="headerlink" title="ofstream"></a>ofstream</h1><p>头文件：<fstream></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"out.txt"</span>)</span></span>;</span><br><span class="line"><span class="keyword">if</span>(out.is_open())</span><br><span class="line">&#123;</span><br><span class="line">	out &lt;&lt; <span class="string">"This is a line\n"</span> ;</span><br><span class="line">	out &lt;&lt; <span class="string">"This is another line\n"</span>;</span><br><span class="line">	out.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>文件不存在时会自动创建文件<br>当文件读写操作完成之后，我们必须将文件关闭以使文件重新变为可访问的。成员函数close()，它负责将缓存中的数据排放出来并关闭文件。这个函数一旦被调用，原先的流对象就可以被用来打开其它的文件了，这个文件也就可以重新被其它的进程所访问了。为防止流对象被销毁时还联系着打开的文件，析构函数将会自动调用关闭函数close。<br><strong>为了原来的内容不被覆盖，需要显示指定ofstream::app</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"out.txt"</span>, ofstream::app)</span></span>;</span><br><span class="line"><span class="keyword">if</span>(out.is_open())</span><br><span class="line">&#123;</span><br><span class="line">	out &lt;&lt; <span class="string">"This is a line\n"</span> ;</span><br><span class="line">	out &lt;&lt; <span class="string">"This is another line\n"</span>;</span><br><span class="line">	out.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="ifstream"><a href="#ifstream" class="headerlink" title="ifstream"></a>ifstream</h1><p>头文件：<ifstream></p>
+<p>(1) 读取方式：逐行读取，将行读入字符串，行只见那用回车换行区分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">string str;</span><br><span class="line">ifstream in(&quot;out.txt&quot;);</span><br><span class="line">if(in.is_open())</span><br><span class="line">&#123;</span><br><span class="line">	while(!in.eof())</span><br><span class="line">	&#123;</span><br><span class="line">		getline(in.str);</span><br><span class="line">		cout &lt;&lt; str &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	cout &lt;&lt; &quot;open file error&quot; &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/c/" rel="tag">c++</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Suka dengan artikel ini? Bantu penulis dengan donasi melalui</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>Alipay</span>
+    <div class="qrcode"><img src="/images/alipay.JPG" alt="Alipay"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>Wechat</span>
+    <div class="qrcode"><img src="/images/wechat.JPG" alt="Wechat"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/30/%E7%94%A8%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%8E%AF%E5%BD%A2%E6%97%A0%E9%94%81%E9%98%9F%E5%88%97/">
+                <span class="level-item">用数组实现的环形无锁队列</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
     </div>
 </div>
 
@@ -654,7 +700,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/yuandan.jpg" alt="乔希磊の博客" height="28">
+                    <img src="/images/yuandan.jpg" alt="c++文件读写操作" height="28">
                 
                 </a>
                 <p class="is-size-7">

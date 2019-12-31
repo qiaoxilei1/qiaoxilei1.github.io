@@ -143,6 +143,61 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-31T01:59:43.000Z">2019-12-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 read (About 293 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/12/31/c-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/">c++文件读写操作</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="ofstream"><a href="#ofstream" class="headerlink" title="ofstream"></a>ofstream</h1><p>头文件：<fstream></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"out.txt"</span>)</span></span>;</span><br><span class="line"><span class="keyword">if</span>(out.is_open())</span><br><span class="line">&#123;</span><br><span class="line">	out &lt;&lt; <span class="string">"This is a line\n"</span> ;</span><br><span class="line">	out &lt;&lt; <span class="string">"This is another line\n"</span>;</span><br><span class="line">	out.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>文件不存在时会自动创建文件<br>当文件读写操作完成之后，我们必须将文件关闭以使文件重新变为可访问的。成员函数close()，它负责将缓存中的数据排放出来并关闭文件。这个函数一旦被调用，原先的流对象就可以被用来打开其它的文件了，这个文件也就可以重新被其它的进程所访问了。为防止流对象被销毁时还联系着打开的文件，析构函数将会自动调用关闭函数close。<br><strong>为了原来的内容不被覆盖，需要显示指定ofstream::app</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"out.txt"</span>, ofstream::app)</span></span>;</span><br><span class="line"><span class="keyword">if</span>(out.is_open())</span><br><span class="line">&#123;</span><br><span class="line">	out &lt;&lt; <span class="string">"This is a line\n"</span> ;</span><br><span class="line">	out &lt;&lt; <span class="string">"This is another line\n"</span>;</span><br><span class="line">	out.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="ifstream"><a href="#ifstream" class="headerlink" title="ifstream"></a>ifstream</h1><p>头文件：<ifstream></p>
+<p>(1) 读取方式：逐行读取，将行读入字符串，行只见那用回车换行区分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">string str;</span><br><span class="line">ifstream in(&quot;out.txt&quot;);</span><br><span class="line">if(in.is_open())</span><br><span class="line">&#123;</span><br><span class="line">	while(!in.eof())</span><br><span class="line">	&#123;</span><br><span class="line">		getline(in.str);</span><br><span class="line">		cout &lt;&lt; str &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	cout &lt;&lt; &quot;open file error&quot; &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-12-30T09:42:48.000Z">2019-12-30</time>
                 
                 <div class="level-item">
@@ -296,11 +351,11 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        Articles
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            2
+                            3
                         </p>
                     </a>
                 </div>
@@ -308,7 +363,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        Catégories
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
@@ -333,7 +388,7 @@
         
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/qiaoxilei1" target="_blank" rel="noopener">
-                Follow</a>
+                SUIVRE</a>
         </div>
         
         
@@ -386,7 +441,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Links
+            Liens
         </h3>
         <ul class="menu-list">
         
@@ -423,7 +478,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Catégories
             </h3>
             <ul class="menu-list">
             <li>
@@ -440,7 +495,7 @@
                 <span class="level-item">日常</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li>
             </ul>
@@ -451,7 +506,7 @@
         <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Tag Cloud
+            Nuage de tags
         </h3>
         <a href="/tags/c/" style="font-size: 10px;">c++</a>
     </div>
@@ -463,8 +518,27 @@
             <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Récents
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/31/c-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="c++文件读写操作">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-31T01:59:43.000Z">2019-12-31</time></div>
+                    <a href="/2019/12/31/c-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/" class="title has-link-black-ter is-size-6 has-text-weight-normal">c++文件读写操作</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -521,7 +595,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -542,7 +616,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/c/">
                         <span class="tag">c++</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -565,8 +639,27 @@
         <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Récents
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/31/c-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="c++文件读写操作">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-31T01:59:43.000Z">2019-12-31</time></div>
+                    <a href="/2019/12/31/c-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/" class="title has-link-black-ter is-size-6 has-text-weight-normal">c++文件读写操作</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -623,7 +716,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -644,7 +737,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/c/">
                         <span class="tag">c++</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -797,7 +890,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -833,9 +926,9 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Articles',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
+                CATEGORIES: 'Catégories',
                 TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
